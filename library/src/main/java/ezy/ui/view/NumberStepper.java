@@ -23,7 +23,7 @@ import ezy.library.numberstepper.R;
 public class NumberStepper extends LinearLayout {
 
     private double mStep = 1.0, mValue = 0.0;
-    private int mMaxValue = 0, mMinValue = 0;
+    private double mMaxValue = 0.0, mMinValue = 0.0;
     ImageView btnLeft, btnRight;
     EditText txtValue;
     OnValueChangedListener mOnValueChanged;
@@ -46,7 +46,7 @@ public class NumberStepper extends LinearLayout {
         init(context, attrs);
     }
 
-    public void init(double step, int min, int max, double value) {
+    public void init(double step, double min, double max, double value) {
 
         if (min == max) {
             txtValue.setFocusable(false);
@@ -61,7 +61,7 @@ public class NumberStepper extends LinearLayout {
         }
 
         mStep = Math.max(step, 1.0);
-        if (mStep != 1) {
+        if (mStep != 1.0) {
             mMinValue = normalize(mMinValue);
             mMaxValue = normalize(mMaxValue);
         }
@@ -178,7 +178,7 @@ public class NumberStepper extends LinearLayout {
         if (value == mValue) {
             return;
         }
-        int valid = Math.min(Math.max(normalize(value), mMinValue), mMaxValue);
+        double valid = Math.min(Math.max(normalize(value), mMinValue), mMaxValue);
         txtValue.setText(String.valueOf(valid));
         if (valid == mValue) { // valid != value
             return;
