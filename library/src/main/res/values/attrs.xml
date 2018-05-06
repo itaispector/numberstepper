@@ -16,7 +16,7 @@
     </declare-styleable>
 
     <style name="NumberStepper" parent="NumberStepperStyle">
-        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_width">130dp</item>
         <item name="android:layout_height">35dp</item>
         <item name="android:background">@drawable/number_stepper_bg</item>
     </style>
