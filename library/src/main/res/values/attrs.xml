@@ -31,7 +31,7 @@
     </style>
 
     <style name="NumberStepperLeft">
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/number_stepper_bg_left</item>
         <item name="android:src">@drawable/number_stepper_left</item>
