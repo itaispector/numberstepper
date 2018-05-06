@@ -23,7 +23,7 @@ import ezy.library.numberstepper.R;
 public class NumberStepper extends LinearLayout {
 
     private double mStep = 1.0, mValue = 0.0;
-    private mMaxValue = 0, mMinValue = 0;
+    private int mMaxValue = 0, mMinValue = 0;
     ImageView btnLeft, btnRight;
     EditText txtValue;
     OnValueChangedListener mOnValueChanged;
