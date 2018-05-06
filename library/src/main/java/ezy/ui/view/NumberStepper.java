@@ -191,7 +191,7 @@ public class NumberStepper extends LinearLayout {
         }
     }
 
-    private int normalize(double value) {
+    private double normalize(double value) {
         return value - value % mStep;
     }
 
