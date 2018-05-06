@@ -22,7 +22,8 @@ import ezy.library.numberstepper.R;
 
 public class NumberStepper extends LinearLayout {
 
-    private int mStep = 1, mValue = 0, mMaxValue = 0, mMinValue = 0;
+    private double mStep = 1.0, mValue = 0.0;
+    private mMaxValue = 0, mMinValue = 0;
     ImageView btnLeft, btnRight;
     EditText txtValue;
     OnValueChangedListener mOnValueChanged;
@@ -45,7 +46,7 @@ public class NumberStepper extends LinearLayout {
         init(context, attrs);
     }
 
-    public void init(int step, int min, int max, int value) {
+    public void init(double step, int min, int max, double value) {
 
         if (min == max) {
             txtValue.setFocusable(false);
@@ -59,7 +60,7 @@ public class NumberStepper extends LinearLayout {
             mMaxValue = Math.max(min, max);
         }
 
-        mStep = Math.max(step, 1);
+        mStep = Math.max(step, 1.0);
         if (mStep != 1) {
             mMinValue = normalize(mMinValue);
             mMaxValue = normalize(mMaxValue);
@@ -162,18 +163,18 @@ public class NumberStepper extends LinearLayout {
             mOnValueChanged.onValueChanged(this, mValue);
         }
     }
-    public int getValue() {
+    public double getValue() {
         if (txtValue.hasFocus()) {
             txtValue.clearFocus();
         }
         return mValue;
     }
 
-    public void setValue(int value) {
+    public void setValue(double value) {
         setValue(value, true);
     }
 
-    public void setValue(int value, boolean notifyValueChanged) {
+    public void setValue(double value, boolean notifyValueChanged) {
         if (value == mValue) {
             return;
         }
@@ -190,7 +191,7 @@ public class NumberStepper extends LinearLayout {
         }
     }
 
-    private int normalize(int value) {
+    private int normalize(double value) {
         return value - value % mStep;
     }
 
@@ -246,7 +247,7 @@ public class NumberStepper extends LinearLayout {
     }
 
     public interface OnValueChangedListener {
-        void onValueChanged(NumberStepper view, int value);
+        void onValueChanged(NumberStepper view, double value);
     }
 }
 
