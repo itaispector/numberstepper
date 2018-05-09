@@ -60,13 +60,13 @@ public class NumberStepper extends LinearLayout {
             mMaxValue = Math.max(min, max);
         }
 
-        mStep = Math.max(step, 1.0);
-        if (mStep != 1.0) {
-            mMinValue = normalize(mMinValue);
-            mMaxValue = normalize(mMaxValue);
-        }
+        //mStep = Math.max(step, 1.0);
+//        if (mStep != 1.0) {
+//            mMinValue = normalize(mMinValue);
+//            mMaxValue = normalize(mMaxValue);
+//        }
 
-        mValue = Integer.MAX_VALUE;
+        mValue = Double.MAX_VALUE;
         setValue(value, false);
     }
 
