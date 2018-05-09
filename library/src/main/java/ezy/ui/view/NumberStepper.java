@@ -153,9 +153,9 @@ public class NumberStepper extends LinearLayout {
         setValue(editableValue(), true);
     }
 
-    private int editableValue() {
+    private double editableValue() {
         Editable value = txtValue.getText();
-        return value.length() == 0 ? 0 : Integer.valueOf(value.toString());
+        return value.length() == 0 ? 0.0 : Double.valueOf(value.toString());
     }
 
     public void notifyValueChanged() {
