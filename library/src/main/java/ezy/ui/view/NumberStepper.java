@@ -82,10 +82,10 @@ public class NumberStepper extends LinearLayout {
 
         try {
             buttonSize = (int) a.getDimension(R.styleable.NumberStepper_nsButtonSize, buttonSize);
-            mStep = a.getInt(R.styleable.NumberStepper_nsStep, 1);
-            mValue = a.getInt(R.styleable.NumberStepper_nsValue, 0);
-            mMinValue = a.getInt(R.styleable.NumberStepper_nsMinValue, Integer.MIN_VALUE);
-            mMaxValue = a.getInt(R.styleable.NumberStepper_nsMaxValue, Integer.MAX_VALUE);
+            mStep = a.getDouble(R.styleable.NumberStepper_nsStep, 1);
+            mValue = a.getDouble(R.styleable.NumberStepper_nsValue, 0);
+            mMinValue = a.getDouble(R.styleable.NumberStepper_nsMinValue, Integer.MIN_VALUE);
+            mMaxValue = a.getDouble(R.styleable.NumberStepper_nsMaxValue, Integer.MAX_VALUE);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
