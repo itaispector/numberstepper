@@ -198,7 +198,7 @@ public class NumberStepper extends LinearLayout {
     OnClickListener onClick = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            int value = editableValue();
+            double value = editableValue();
             setValue(btnLeft == v ? (value - mStep) : (value + mStep), true);
         }
     };
