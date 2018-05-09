@@ -4,10 +4,10 @@
     <declare-styleable name="NumberStepper">
         <attr name="nsButtonSize" format="dimension" />
 
-        <attr name="nsStep" format="integer" />
-        <attr name="nsValue" format="integer" />
-        <attr name="nsMaxValue" format="integer" />
-        <attr name="nsMinValue" format="integer" />
+        <attr name="nsStep" format="float" />
+        <attr name="nsValue" format="float" />
+        <attr name="nsMaxValue" format="float" />
+        <attr name="nsMinValue" format="float" />
 
         <attr name="nsStyleLeft" format="reference"/>
         <attr name="nsStyleRight" format="reference" />
